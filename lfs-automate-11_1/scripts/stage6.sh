@@ -17,10 +17,10 @@ if chroot "$LFS" /usr/bin/env -i stage=$stage PS1='(lfs chroot) \u:\w\$ ' \
 	fi
 
 	printf '=%.0s' {1..70}; echo
-	echo "Creating backup file '$LFS_HOSTNAME-non_uefi.tar'..."
+	echo "Creating backup file '$LFS_HOSTNAME'..."
 
-	tar cf $LFS_HOSTNAME-non_uefi.tar --exclude sources --exclude scripts -C $LFS .
-	chown $SUDO_USER $LFS_HOSTNAME-non_uefi.tar
+	tar cf $LFS_HOSTNAME.tar --exclude sources --exclude scripts -C $LFS .
+	chown $SUDO_USER $LFS_HOSTNAME.tar
 else
 	tail -n10 $LFS/build_log/lastlog
 	echo 'Error. See the log file by the following command:'
