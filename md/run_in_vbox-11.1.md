@@ -15,6 +15,8 @@ echo $LO_DEV # The --show option will tell you which loop device you are created
 
 sudo fdisk $LO_DEV # We only need 1 parimary partition
 
+sudo mkfs.ext4 $LO_DEV
+
 sudo mount ${LO_DEV}p1 $LFS # mount the partition $LFS
 tar xf lfs-automate-11_1.tar $LFS # Restore the tar archive.
 
