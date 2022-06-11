@@ -23,5 +23,5 @@ sudo mkfs.ext4 ${LO_DEV}p1
 
 sudo mount ${LO_DEV}p1 $LFS # mount the partition $LFS
 
-sudo tar xf lfs-automate-11_1.tar $LFS # Restore the tar archive.
+sudo tar xf lfs-automate-11_1.tar -C $LFS # Restore the tar archive.
 ```
