@@ -43,3 +43,14 @@ The size is about 1.2GB without kernel.
 **You should not press the [CTRL-C] to stop during the processing.**
 
 It is important.
+
+## If there is error
+- See the log file to the the reason.
+- Rename '/etc/bash.bashrc.NOUSE' to '/etc/bash.bashrc.NOUSE'.
+- Delete the 'lfs' user.
+- Unmount the LFS point.
+``` bash
+sudo mv /etc/bash.bashrc.NOUSE /etc/bash.bashrc
+sudo userdel -rf lfs
+sudo umount -R /mnt/lfs
+```
