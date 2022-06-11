@@ -36,11 +36,11 @@ Enter 'Y' to continue or 'N' to exit:
 Finally, the tar file 'lfs-automate-11_1*.tar' will be created if there no error.
 The size is about 1.2GB without kernel.
 
-**You should not press the [CTRL-C] to stop during the processing.**
+- **You should not press the [CTRL-C] to stop during the processing.**
 
-**You should not press the [CTRL-C] to stop during the processing.**
+- **You should not press the [CTRL-C] to stop during the processing.**
 
-**You should not press the [CTRL-C] to stop during the processing.**
+- **You should not press the [CTRL-C] to stop during the processing.**
 
 It is important.
 
