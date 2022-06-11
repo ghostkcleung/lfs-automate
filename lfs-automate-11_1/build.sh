@@ -71,7 +71,6 @@ export GROFF_PAGESIZE=$GROFF_PAGESIZE
 export LFS_HOSTNAME=$LFS_HOSTNAME
 export LFS_LANG=$LANG
 export BUILD_DEFAULT_KERNEL=$BUILD_DEFAULT_KERNEL
-export WITH_UEFI=$WITH_UEFI
 EOF
 ############# End of chapter 7.2 ################
 
