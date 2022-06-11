@@ -11,3 +11,21 @@ Run the following command to start:
 ``` bash
 sudo bash build.sh
 ```
+
+Read the text carefully, then enter 'Y' to continoue.
+```
+Automate script for LFS 11.1
+**********************************************************************
+Please check before start...
+1. Run the 'version-check.sh' for the requirements. (See chapter 2.2)
+2. The script need to run as root: root
+**********************************************************************
+BE ATTENTION!!! BE ATTENTION!!! BE ATTENTION!!!
+**********************************************************************
+The scripts may take more than few hours.
+It takes up to about 6GB memories(tmpfs).
+You cannot stop it by pressing [Ctrl-c].
+If you need to terminate really. Reboot the host system forcibly.
+**********************************************************************
+Enter 'Y' to continue or 'N' to exit: 
+```
