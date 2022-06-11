@@ -15,7 +15,7 @@ echo $LO_DEV # The --show option will tell you which loop device you are created
 
 sudo fdisk $LO_DEV # We only need 1 parimary partition
 
-sudo mkfs.ext4 $LO_DEV
+sudo mkfs.ext4 ${LO_DEV}p1
 
 sudo mount ${LO_DEV}p1 $LFS # mount the partition $LFS
 
