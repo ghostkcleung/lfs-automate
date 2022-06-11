@@ -54,7 +54,7 @@ sudo umount -R /mnt/lfs
 See the chapter 7.3, 7.4
 https://www.linuxfromscratch.org/lfs/view/stable/chapter07/kernfs.html
 
-- Umount all the virtual kernel file system to prevent double mount.
+- Umount all the virtual kernel file system to prevent repeat mount.
 - Remount virtual kernel file system. And bind the source code also.
 - Enter chroot
 ``` bash
