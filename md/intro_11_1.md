@@ -37,7 +37,7 @@ The size is about 1.2GB without kernel.
 - **You should not press the [CTRL-C] to stop during the processing.**
 - **You should not press the [CTRL-C] to stop during the processing.**
 - **You should not press the [CTRL-C] to stop during the processing.**
-- **It is very important.**
+- **It is very important!**
 
 ## If error when build.
 - See the log file to the the reason.
