@@ -7,5 +7,5 @@ groups # Check the groups
 
 Create a dummy image file
 ``` bash
-fallocate -l 3G lfs-automate-11_1-non_uefi.img
+fallocate -l 3G lfs-automate-11_1.img
 ```
