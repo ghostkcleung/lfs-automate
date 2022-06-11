@@ -90,7 +90,7 @@ sudo chroot "$LFS" /usr/bin/env -i   \
 - Un-tar the file to your block device.
 - Enter chroot
 - Re-build your own kernel if need.
-- install the boot loader (grub) to your device
+- Install the boot loader (grub) to your device
 
 See the chapter 10.
 https://www.linuxfromscratch.org/lfs/view/stable/chapter10/introduction.html
