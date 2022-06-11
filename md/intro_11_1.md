@@ -44,7 +44,7 @@ The size is about 1.2GB without kernel.
 
 It is important.
 
-## If there is error
+## If error when build.
 - See the log file to the the reason.
 - Rename '/etc/bash.bashrc.NOUSE' to '/etc/bash.bashrc.NOUSE'.
 - Delete the 'lfs' user.
