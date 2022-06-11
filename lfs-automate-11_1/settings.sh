@@ -17,4 +17,3 @@ KEEP_STAGE_TAR=NO			# YES for keep the old stageX.tar after the new stage is bui
 LFS_HOSTNAME='lfs-automate-11_1'	# Name of the new host
 
 BUILD_DEFAULT_KERNEL=YES		# Build kernel with default config
-WITH_UEFI=NO	# UEFI, YES or ( non-YES )
