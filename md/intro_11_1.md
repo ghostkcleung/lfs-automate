@@ -5,8 +5,7 @@ Firstly, I hope you can "Fully Read" the LFS book https://www.linuxfromscratch.o
 The scripts is just for assist you to skip a lot of copy and paste jobs.
 
 ## Requirements
-The script uses up to 6GB RAM disk to build that is mount as tmpfs. So it will use the swap cache if the memory is not enough and the processing will be slowed down. Finally, the tar file 'lfs-automate-11_1*.tar' will be created. It is about 1.2GB without kernel.
-
+The script uses up to 6GB RAM disk to build that is mount as tmpfs. So it will use the swap cache if the memory is not enough and the processing will be slowed down.
 Run the version-check.sh for the requirment. ( See chapter 2.2 )
 
 https://www.linuxfromscratch.org/lfs/view/11.1/chapter02/hostreqs.html
@@ -34,3 +33,11 @@ If you need to terminate really. Reboot the host system forcibly.
 **********************************************************************
 Enter 'Y' to continue or 'N' to exit: 
 ```
+Finally, the tar file 'lfs-automate-11_1*.tar' will be created if there no error.
+The size is about 1.2GB without kernel.
+
+**You should not press the [CTRL-C] to stop during the processing.**
+**You should not press the [CTRL-C] to stop during the processing.**
+**You should not press the [CTRL-C] to stop during the processing.**
+
+It is important.
