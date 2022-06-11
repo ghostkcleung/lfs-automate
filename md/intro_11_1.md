@@ -62,7 +62,7 @@ https://www.linuxfromscratch.org/lfs/view/stable/chapter07/kernfs.html
 - Enter chroot
 ``` bash
 pushd $LFS
-umount -R $LFS # It's OK if you can see 'umount: /mnt/lfs: not mounted'.
+umount -R $LFS # It's OK if you can see 'umount: /mnt/lfs: target is busy.'.
 popd
 
 mount -v --bind /dev $LFS/dev
