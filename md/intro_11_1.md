@@ -52,3 +52,33 @@ sudo mv /etc/bash.bashrc.NOUSE /etc/bash.bashrc
 sudo userdel -rf lfs
 sudo umount -R /mnt/lfs
 ```
+
+## Entering the chroot environment
+See the chapter 7.3, 7.4
+https://www.linuxfromscratch.org/lfs/view/stable/chapter07/kernfs.html
+
+- Umount all the virtual kernel file system to prevent double mount.
+- Remount virtual kernel file system.
+``` bash
+pushd $LFS
+umount -R $LFS # It's OK if you can see 'umount: /mnt/lfs: not mounted'.
+popd
+
+mount -v --bind /dev $LFS/dev
+
+mount -v --bind /dev/pts $LFS/dev/pts
+mount -vt proc proc $LFS/proc
+mount -vt sysfs sysfs $LFS/sys
+mount -vt tmpfs tmpfs $LFS/run
+
+if [ -h $LFS/dev/shm ]; then
+  mkdir -pv $LFS/$(readlink $LFS/dev/shm)
+fi
+
+sudo chroot "$LFS" /usr/bin/env -i   \
+    HOME=/root                  \
+    TERM="$TERM"                \
+    PS1='(lfs chroot) \u:\w\$ ' \
+    PATH=/usr/bin:/usr/sbin     \
+    /bin/bash --login
+```
