@@ -16,7 +16,7 @@ echo $LO_DEV # The --show option will tell you which loop device you are created
 sudo fdisk $LO_DEV
 ####### We only need 1 parimary partition like this #######
 # Device        Boot Start     End Sectors Size Id Type   #
-# /dev/loop17p1       2048 6291455 6289408   3G 83 Linux  #
+# /dev/loop<X>p1       2048 6291455 6289408   3G 83 Linux  #
 ###########################################################
 
 sudo mkfs.ext4 ${LO_DEV}p1
