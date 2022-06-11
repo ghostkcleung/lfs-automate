@@ -10,7 +10,7 @@ mount -t tmpfs tmpfs $LFS
 
 cp -R scripts $LFS
 
-if [[ ! -f $LFS_HOSTNAME-non_uefi.tar && ! -f $LFS_HOSTNAME-uefi.tar ]]; then
+if [[ ! -f $LFS_HOSTNAME.tar ]]; then
 
 ################ Chapter 4.3 ####################
 userdel -rf $LFS_USER &> /dev/null || true
