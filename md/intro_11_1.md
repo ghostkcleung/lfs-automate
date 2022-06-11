@@ -2,6 +2,7 @@
 
 ## Before start
 Firstly, I hope you can "Fully Read" the LFS book https://www.linuxfromscratch.org to understand what are you doing.
+The scripts is just for assist you to skip a lot of copy and paste jobs.
 
 ## Requirements
 The script uses up to 6GB RAM disk to build that is mount as tmpfs. So it will use the swap cache if the memory is not enough and the processing will be slowed down. Finally, the tar file 'lfs-automate-11_1*.tar' will be created. It is about 1.2GB without kernel.
