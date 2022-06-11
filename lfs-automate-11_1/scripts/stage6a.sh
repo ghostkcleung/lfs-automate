@@ -43,7 +43,7 @@ cd blfs-bootscripts-20210826
 make install-random
 popd &> /dev/null || true
 
-if [[ $BUILD_DEFAULT_KERNEL == 'YES' && $WITH_UEFI != 'YES' ]]; then
+if [[ $BUILD_DEFAULT_KERNEL == 'YES' ]]; then
 	echo '10.3. Linux-5.16.9'
 	source /scripts/stage6/ch10_3.sh
 fi
