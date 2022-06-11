@@ -1,9 +1,5 @@
 # Introduction for build LFS 11.1 with automate script.
 
-## Before start
-Firstly, I hope you can "Fully Read" the LFS book https://www.linuxfromscratch.org to understand what are you doing.
-The scripts is just for assist you to skip a lot of copy and paste jobs.
-
 ## Requirements
 The script uses up to 6GB RAM disk to build that is mount as tmpfs. So it will use the swap cache if the memory is not enough and the processing will be slowed down.
 Run the version-check.sh for the requirment. ( See chapter 2.2 )
