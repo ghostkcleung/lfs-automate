@@ -54,7 +54,7 @@ insmod ext2
 set root=(hd0,msdos1)
 
 menuentry "GNU/Linux, Linux 5.16.9-lfs-11.1" {
-        linux   /boot/vmlinuz-5.16.9-lfs-11.1 root=/dev/sda2 ro
+        linux   /boot/vmlinuz-5.16.9-lfs-11.1 root=/dev/sda1 ro
 }
 EOF
 ```
