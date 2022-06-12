@@ -82,7 +82,7 @@ menuentry "GNU/Linux, Linux 5.16.9-lfs-11.1" {
 }
 EOF
 ```
-Set lfs root password, unmount, unbind and detach
+Set the LFS root password, unmount, unbind and detach
 ``` bash
 passwd
 exit    # Back to the normal shell
