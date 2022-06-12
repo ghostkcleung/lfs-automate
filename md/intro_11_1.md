@@ -18,7 +18,7 @@ Run the following command to start:
 sudo bash build.sh
 ```
 
-Read the text carefully, then enter 'Y' to continoue.
+Read the text carefully. Then enter 'Y' to continoue.
 ```
 Automate script for LFS 11.1
 **********************************************************************
