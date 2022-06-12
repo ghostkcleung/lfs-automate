@@ -86,7 +86,7 @@ sudo chroot "$LFS" /usr/bin/env -i   \
 
 ## Make it bootable
 - Un-tar the file to your block device.
-- Enter chroot
+- Enter chroot ( See above )
 - Re-build your own kernel if need.
 - Install the boot loader (grub) to your device
 - Config your own '/etc/fstab' file.
