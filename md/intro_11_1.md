@@ -59,28 +59,23 @@ https://www.linuxfromscratch.org/lfs/view/stable/chapter07/kernfs.html
 - Enter chroot
 ``` bash
 pushd $LFS
-umount -R $LFS # It's OK if you can see 'umount: /mnt/lfs: target is busy.'.
+sudo umount -R $LFS # It's OK if you can see 'umount: /mnt/lfs: target is busy.'.
 popd
 
-mount -v --bind /dev $LFS/dev
+sudo mount -v --bind /dev $LFS/dev
 
-mount -v --bind /dev/pts $LFS/dev/pts
-mount -vt proc proc $LFS/proc
-mount -vt sysfs sysfs $LFS/sys
-mount -vt tmpfs tmpfs $LFS/run
+sudo mount -v --bind /dev/pts $LFS/dev/pts
+sudo mount -vt proc proc $LFS/proc
+sudo mount -vt sysfs sysfs $LFS/sys
+sudo mount -vt tmpfs tmpfs $LFS/run
 
-mount -v --bind sources $LFS/sources
+sudo mount -v --bind sources $LFS/sources
 
 if [ -h $LFS/dev/shm ]; then
-  mkdir -pv $LFS/$(readlink $LFS/dev/shm)
+  sudo mkdir -pv $LFS/$(readlink $LFS/dev/shm)
 fi
 
-sudo chroot "$LFS" /usr/bin/env -i   \
-    HOME=/root                  \
-    TERM="$TERM"                \
-    PS1='(lfs chroot) \u:\w\$ ' \
-    PATH=/usr/bin:/usr/sbin     \
-    /bin/bash --login
+sudo chroot "$LFS" /bin/bash --login
 ```
 
 ## Make it bootable
