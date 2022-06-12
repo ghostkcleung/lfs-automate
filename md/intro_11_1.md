@@ -47,7 +47,7 @@ The size is about 1.2GB without kernel.
 - See the log file to find out the the reason.
 - Rename '/etc/bash.bashrc.NOUSE' back to '/etc/bash.bashrc'.
 - Delete the 'lfs' user.
-- Unmount the LFS point.
+- Unmount the LFS points.
 ``` bash
 sudo mv /etc/bash.bashrc.NOUSE /etc/bash.bashrc
 sudo userdel -rf lfs
