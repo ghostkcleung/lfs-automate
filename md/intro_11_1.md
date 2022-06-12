@@ -3,9 +3,13 @@
 ## Requirements
 The script uses up to 6GB RAM disk to build that is mount as tmpfs. It will use the swap cache if the memory is not enough and the process will be slowed down.
 
-Run the version-check.sh for the requirment. ( See chapter 2.2 )
+Run the 'version-check.sh' for the requirment. ( See chapter 2.2 )
 
 https://www.linuxfromscratch.org/lfs/view/11.1/chapter02/hostreqs.html
+
+Prepare the source code to the path './sources' ( See chapter 3 )
+
+https://www.linuxfromscratch.org/lfs/view/11.1/chapter03/chapter03.html
 ## Start to build
 See the 'settings.sh' file. Usually you can keep it unchange.
 
