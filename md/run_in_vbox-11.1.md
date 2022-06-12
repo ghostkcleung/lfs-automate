@@ -82,3 +82,10 @@ menuentry "GNU/Linux, Linux 5.16.9-lfs-11.1" {
 }
 EOF
 ```
+Unmount and unbind
+``` bash
+exit    # Back to the normal shell
+
+sudo umount -R $LFS
+losetup -d $LO_DEV
+```
