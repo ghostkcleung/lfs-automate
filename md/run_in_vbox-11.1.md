@@ -42,7 +42,12 @@ if [ -h $LFS/dev/shm ]; then
   sudo mkdir -pv $LFS/$(readlink $LFS/dev/shm)
 fi
 
-sudo chroot "$LFS" LO_DEV=$LO_DEV /bin/bash --login
+sudo chroot "$LFS" /usr/bin/env -i   \
+    LO_DEV=$LO_DEV /bin/bash --login
+```
+Install grub to the loop device
+``` bash
+grub-install $LO_DEV --target=i386-pc
 ```
 Create the 'fstab' file
 ``` bash
