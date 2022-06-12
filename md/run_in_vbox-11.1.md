@@ -51,7 +51,7 @@ grub-install $LO_DEV --target=i386-pc
 ```
 Create the 'fstab' file
 ``` bash
-sudo cat > /etc/fstab << "EOF"
+cat > /etc/fstab << "EOF"
 # Begin /etc/fstab
 
 # file system  mount-point  type     options             dump  fsck
