@@ -58,3 +58,20 @@ menuentry "GNU/Linux, Linux 5.16.9-lfs-11.1" {
 }
 EOF
 ```
+Mount the virtual kernel file system and enter the chroot environment
+``` bash
+pushd $LFS
+sudo umount -R $LFS
+popd
+
+sudo mount -v --bind /dev $LFS/dev
+
+sudo mount -v --bind /dev/pts $LFS/dev/pts
+sudo mount -vt proc proc $LFS/proc
+sudo mount -vt sysfs sysfs $LFS/sys
+sudo mount -vt tmpfs tmpfs $LFS/run
+
+if [ -h $LFS/dev/shm ]; then
+  sudo mkdir -pv $LFS/$(readlink $LFS/dev/shm)
+fi
+```
