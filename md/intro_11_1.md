@@ -44,7 +44,7 @@ The size is about 1.2GB without kernel.
 - **It is very important!**
 
 ## If error when build
-- See the log file to find the the reason.
+- See the log file to find out the the reason.
 - Rename '/etc/bash.bashrc.NOUSE' back to '/etc/bash.bashrc.NOUSE'.
 - Delete the 'lfs' user.
 - Unmount the LFS point.
