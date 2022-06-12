@@ -53,7 +53,17 @@ sudo mv /etc/bash.bashrc.NOUSE /etc/bash.bashrc
 sudo userdel -rf lfs
 sudo umount -R /mnt/lfs
 ```
+## Make it bootable
+- Un-tar the file to your block device.
+- Enter chroot ( See above )
+- Re-build your own kernel if need.
+- Install the boot loader (grub) to your device
+- Config your own '/etc/fstab' file.
+- Config your own '/boot/grub/grub.cfg' file
 
+
+See the chapter 10.
+https://www.linuxfromscratch.org/lfs/view/stable/chapter10/introduction.html
 ## Entering the chroot environment
 See the chapter 7.3, 7.4
 https://www.linuxfromscratch.org/lfs/view/stable/chapter07/kernfs.html
@@ -87,15 +97,3 @@ sudo chroot "$LFS" /usr/bin/env -i   \
     PATH=/usr/bin:/usr/sbin     \
     /bin/bash --login
 ```
-
-## Make it bootable
-- Un-tar the file to your block device.
-- Enter chroot ( See above )
-- Re-build your own kernel if need.
-- Install the boot loader (grub) to your device
-- Config your own '/etc/fstab' file.
-- Config your own '/boot/grub/grub.cfg' file
-
-
-See the chapter 10.
-https://www.linuxfromscratch.org/lfs/view/stable/chapter10/introduction.html
