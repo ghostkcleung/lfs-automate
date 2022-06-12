@@ -74,4 +74,6 @@ sudo mount -vt tmpfs tmpfs $LFS/run
 if [ -h $LFS/dev/shm ]; then
   sudo mkdir -pv $LFS/$(readlink $LFS/dev/shm)
 fi
+
+chroot "$LFS" /bin/bash --login
 ```
