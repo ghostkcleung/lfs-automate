@@ -82,8 +82,9 @@ menuentry "GNU/Linux, Linux 5.16.9-lfs-11.1" {
 }
 EOF
 ```
-Unmount, unbind and detach
+Set lfs root password, unmount, unbind and detach
 ``` bash
+passwd
 exit    # Back to the normal shell
 
 sudo umount -R $LFS
