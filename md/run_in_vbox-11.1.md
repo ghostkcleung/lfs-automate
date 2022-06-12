@@ -25,3 +25,21 @@ sudo mount ${LO_DEV}p1 $LFS # mount the partition $LFS
 
 sudo tar xf lfs-automate-11_1.tar -C $LFS # Restore the tar archive.
 ```
+Create the fstab file
+``` bash
+cat > $LFS/etc/fstab << "EOF"
+# Begin /etc/fstab
+
+# file system  mount-point  type     options             dump  fsck
+#                                                              order
+/dev/sda1     /            <fff>    defaults            1     1
+
+proc           /proc        proc     nosuid,noexec,nodev 0     0
+sysfs          /sys         sysfs    nosuid,noexec,nodev 0     0
+devpts         /dev/pts     devpts   gid=5,mode=620      0     0
+tmpfs          /run         tmpfs    defaults            0     0
+devtmpfs       /dev         devtmpfs mode=0755,nosuid    0     0
+
+# End /etc/fstab
+EOF
+```
