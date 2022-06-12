@@ -27,7 +27,7 @@ sudo tar xf lfs-automate-11_1.tar -C $LFS # Restore the tar archive.
 ```
 Create the fstab file
 ``` bash
-cat > $LFS/etc/fstab << "EOF"
+sudo cat > $LFS/etc/fstab << "EOF"
 # Begin /etc/fstab
 
 # file system  mount-point  type     options             dump  fsck
