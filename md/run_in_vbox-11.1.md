@@ -25,7 +25,7 @@ sudo mount ${LO_DEV}p1 $LFS # mount the partition $LFS
 
 sudo tar xf lfs-automate-11_1.tar -C $LFS # Restore the tar archive.
 ```
-Create the fstab file
+Create the 'fstab' file
 ``` bash
 sudo cat > $LFS/etc/fstab << "EOF"
 # Begin /etc/fstab
@@ -41,5 +41,20 @@ tmpfs          /run         tmpfs    defaults            0     0
 devtmpfs       /dev         devtmpfs mode=0755,nosuid    0     0
 
 # End /etc/fstab
+EOF
+```
+Create the 'grub.cfg' file
+``` bash
+sudo cat > /boot/grub/grub.cfg << "EOF"
+# Begin /boot/grub/grub.cfg
+set default=0
+set timeout=5
+
+insmod ext2
+set root=(hd0,2)
+
+menuentry "GNU/Linux, Linux 5.16.9-lfs-11.1" {
+        linux   /boot/vmlinuz-5.16.9-lfs-11.1 root=/dev/sda2 ro
+}
 EOF
 ```
