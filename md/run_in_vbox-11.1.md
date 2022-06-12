@@ -42,7 +42,7 @@ if [ -h $LFS/dev/shm ]; then
   sudo mkdir -pv $LFS/$(readlink $LFS/dev/shm)
 fi
 
-sudo chroot "$LFS" /bin/bash --login
+sudo chroot "$LFS" LO_DEV=$LO_DEV /bin/bash --login
 ```
 Create the 'fstab' file
 ``` bash
@@ -64,7 +64,7 @@ EOF
 ```
 Create the 'grub.cfg' file
 ``` bash
-sudo cat > /boot/grub/grub.cfg << "EOF"
+cat > /boot/grub/grub.cfg << "EOF"
 # Begin /boot/grub/grub.cfg
 set default=0
 set timeout=5
