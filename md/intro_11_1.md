@@ -58,6 +58,7 @@ https://www.linuxfromscratch.org/lfs/view/stable/chapter07/kernfs.html
 - Remount virtual kernel file system. And bind the source code also.
 - Enter chroot
 ``` bash
+LFS=/mnt/lfs
 pushd $LFS
 sudo umount -R $LFS # It's OK if you can see 'umount: /mnt/lfs: target is busy.'.
 popd
