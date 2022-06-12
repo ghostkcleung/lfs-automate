@@ -82,10 +82,16 @@ menuentry "GNU/Linux, Linux 5.16.9-lfs-11.1" {
 }
 EOF
 ```
-Unmount and unbind
+Unmount, unbind and detach
 ``` bash
 exit    # Back to the normal shell
 
 sudo umount -R $LFS
 losetup -d $LO_DEV
+```
+Create the vmdk file
+``` bash
+vboxmanage internalcommands createrawvmdk \
+  -filename lfs-automate-11_1.vmdk \
+  -rawdisk lfs-automate-11_1.img
 ```
