@@ -14,7 +14,7 @@ printf '*%.0s' {1..70}; echo
 
 cat << EOF
 The scripts may take more than few hours.
-It takes up to about 6GB memories(tmpfs).
+It takes up to about 7GB memories(tmpfs).
 You cannot stop it by pressing [Ctrl-c].
 If you need to terminate really. Reboot the host system forcibly.
 EOF
