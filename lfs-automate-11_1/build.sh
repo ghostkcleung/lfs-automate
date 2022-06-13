@@ -6,7 +6,7 @@ source promt.sh
 mkdir -p $LFS
 umount -R $LFS &> /dev/null || true	# Make sure all lfs related point is not mounted.
 
-mount -t tmpfs tmpfs $LFS
+mount -t tmpfs -0 size=7G tmpfs $LFS
 
 cp -R scripts $LFS
 
