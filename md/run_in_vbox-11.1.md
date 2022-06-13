@@ -42,8 +42,14 @@ if [ -h $LFS/dev/shm ]; then
   sudo mkdir -pv $LFS/$(readlink $LFS/dev/shm)
 fi
 
-sudo chroot "$LFS" /usr/bin/env -i   \
-    LO_DEV=$LO_DEV /bin/bash --login
+
+chroot "$LFS" /usr/bin/env -i   \
+    HOME=/root                  \
+    TERM="$TERM"                \
+    LO_DEV=$LO_DEV              \
+    PS1='(lfs chroot) \u:\w\$ ' \
+    PATH=/usr/bin:/usr/sbin     \
+    /bin/bash --login
 ```
 Install grub to the loop device
 ``` bash
