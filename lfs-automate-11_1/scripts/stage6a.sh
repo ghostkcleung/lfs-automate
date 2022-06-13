@@ -35,14 +35,6 @@ echo 'Fixing Locale Related Issues (BLFS Chapter 2)'
 find /usr/share/man -type f | xargs /usr/sbin/checkman.sh &> /dev/null
 dircolors -p > /etc/dircolors
 
-echo 'Random Number Generation (BLFS Chapter 3)'
-pushd /build &> /dev/null || true
-tar xf /sources/blfs-bootscripts-20210826.tar.xz
-cd blfs-bootscripts-20210826
-
-make install-random
-popd &> /dev/null || true
-
 if [[ $BUILD_DEFAULT_KERNEL == 'YES' ]]; then
 	echo '10.3. Linux-5.16.9'
 	source /scripts/stage6/ch10_3.sh
