@@ -1,7 +1,7 @@
 # Introduction for build LFS 11.1 with automate script.
 
 ## Requirements
-The script uses up to 6GB RAM disk to build that is mount as tmpfs. It will use the swap cache if the memory is not enough and the process will be slowed down.
+The script uses up to 7GB RAM disk to build that is mount as tmpfs. It will use the swap cache if the memory is not enough and the process will be slowed down.
 
 Run the 'version-check.sh' for the requirment. ( See chapter 2.2 )
 
