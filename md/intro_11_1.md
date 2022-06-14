@@ -7,6 +7,11 @@ Run the 'version-check.sh' for the requirment. ( See chapter 2.2 )
 
 https://www.linuxfromscratch.org/lfs/view/11.1/chapter02/hostreqs.html
 
+For Ubuntu, the default shell is DASH. run the following command to change:
+```bash
+sudo dpkg-reconfigure dash
+```
+
 Prepare the source code to the path './sources' ( See chapter 3 )
 
 https://www.linuxfromscratch.org/lfs/view/11.1/chapter03/chapter03.html
